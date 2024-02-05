@@ -40,7 +40,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-
     'rest_framework',
     'adminmodule',
     'fstorage',
@@ -74,7 +73,6 @@ MIDDLEWARE = [
 #
 # CORS_ALLOW_HEADERS = ('content-disposition', 'accept-encoding',
 #                       'content-type', 'accept', 'origin', 'Authorization',
-#                       'access-control-allow-methods')
 #
 # CSRF_TRUSTED_ORIGINS = ['http://localhost:3000/']
 #/////////////////////////////////
@@ -98,7 +96,7 @@ TEMPLATES = [
 mimetypes.add_type("text/css", ".css", True)
 WSGI_APPLICATION = 'host.wsgi.application'
 
-# Database
+# Database Root*123
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 DATABASES = {
@@ -106,7 +104,9 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'filehost_db',
         'USER': 'host_admin',
-        'PASSWORD': '123456789'
+        'PASSWORD': '123456789',
+        'HOST':'localhost',
+        'PORT':'',
     }
 }
 

@@ -56,6 +56,15 @@ function LoginForm() {
         break;
     }
   };
+  const simple = {
+    login: "Simple_user",
+    password: "Simple123*",
+  };
+
+  const adm = {
+    login: "Admin_user",
+    password: "Admin123*",
+  };
 
   const sendFormhandler = async (e) => {
     e.preventDefault();
@@ -72,7 +81,9 @@ function LoginForm() {
     } else {
       alert("Wrong login or password");
     }
+
   };
+  
 
   return (
     <div className="LoginPage">
@@ -112,7 +123,13 @@ function LoginForm() {
             Войти
           </button>
         </form>
+        <br></br>
+        <div className="loginData">
+          <h5 className="loginDataItem">Пользователь: <br></br>Login: {simple.login} <br></br>password: {simple.password}</h5>
+          <h5>Администратор: <br></br>Login: {adm.login} <br></br>password: {adm.password}</h5>
+          </div>
       </div>
+      
       <div className="LogPageImg">
         <img className='LogImg' src={loginImg} />
       </div>
